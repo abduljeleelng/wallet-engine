@@ -1,0 +1,67 @@
+{
+  "name": "wallet-engine",
+  "version": "1.0.0",
+  "description": "The wallet system that transact create wallet, debit wallet and activate and deactive the wallet and many features",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "docs": "node swagger.js",
+    "db:create": "npx sequelize-cli db:create",
+    "db:drop": "npx sequelize-cli db:drop",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:seed": "npx sequelize-cli db:seed:all",
+    "test": "cross-env NODE_ENV=test mocha ./_test/*",
+    "pretest": "cross-env NODE_ENV=test npm run db:reset",
+    "db:reset": "cross-env NODE_ENV=test npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate",
+    "db:no": "cross-env NODE_ENV=test npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all --seeders-path ./src/seeders/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abduljeleelng/wallet-engine.git"
+  },
+  "keywords": [
+    "Wallet",
+    "Nodejs",
+    "Express",
+    "MySQL",
+    "ORM",
+    "Sequelize",
+    "e-Wallet",
+    "Wallet-engine"
+  ],
+  "author": "Abduljeleel Yusuff <abduljeleelng@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abduljeleelng/wallet-engine/issues"
+  },
+  "homepage": "https://github.com/abduljeleelng/wallet-engine#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "crypto": "^1.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.1.0",
+    "express-validator": "^5.3.1",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.0",
+    "nodemailer": "^6.6.3",
+    "pg": "^8.7.1",
+    "sequelize": "^6.6.5",
+    "swagger-ui-express": "^4.1.6",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1",
+    "mochawesome": "^6.2.2",
+    "nodemon": "^2.0.12",
+    "sequelize-cli": "^6.2.0",
+    "supertest": "^6.1.6",
+    "swagger-autogen": "^2.11.2"
+  }
+}
