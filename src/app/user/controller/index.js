@@ -33,7 +33,7 @@ exports.debit = async (req, res) =>{
     //communicate with external servies such NIBSS, Paystack, flutterwave and charge the user then return the amount
     const {amount} = req.body
     try {
-        if(req.balance < amount) return res.status(406).json({error:"Insuficient fund in the user wallet"})
+        if(req.wallet.balance < amount) return res.status(406).json({error:"Insuficient fund in the user wallet"})
         const data = await users.debit(req.auth.id, amount, req.wallet)
         if(data.error) return res.status(406).json(data.error)
         return res.status(200).json({data})
@@ -54,7 +54,6 @@ exports.credit = async (req, res) =>{
     //communicate with external servies such NIBSS, Paystack, flutterwave and charge the user then return the amount
     const {amount} = req.body
     try {
-        if(req.balance < amount) return res.status(406).json({error:"Insuficient fund in the user wallet"})
         const data = await users.credit(req.auth.id, amount, req.wallet)
         if(data.error) return res.status(406).json(data.error)
         return res.status(200).json({data})
