@@ -2,7 +2,7 @@
 <img src="icon.png" align="right" />
 
 # Wallet Engine [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/abduljeleelng/wallet-engine#readme)
-> wallet-engine API Services, 
+> The wallet system that transacts create a wallet, debit wallet , credit wallet, and activate and deactivate the wallet and many features, 
 # Technology used
 *  Nodejs, 
 * Express, 
