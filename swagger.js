@@ -5,9 +5,9 @@ const doc = {
     title: 'Wallet Engine ',
     description: 'The wallet system that transact create wallet, debit wallet and activate and deactive the wallet and many features',
   },
-  host: 'localhost:3000/api/v1',
+  host: 'abduljeleelng-wallet-engine.herokuapp.com',
   basePath: "/",
-  schemes: ['http'],
+  schemes: ['https'],
   consumes: ['application/json'],
   produces: ['application/json'],
   tags: [
