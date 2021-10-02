@@ -5,11 +5,11 @@
     "description": "The wallet system that transact create wallet, debit wallet and activate and deactive the wallet and many features",
     "version": "1.0.0"
   },
-  "host": "localhost:3000/api/v1",
+  "host": "abduljeleelng-wallet-engine.herokuapp.com",
   "basePath": "/",
   "tags": [],
   "schemes": [
-    "http"
+    "https"
   ],
   "securityDefinitions": {
     "apiKeyAuth": {
